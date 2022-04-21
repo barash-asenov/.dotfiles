@@ -1,3 +1,30 @@
+"" Source your .vimrc
+"source ~/.vimrc
+Plug 'preservim/nerdtree'
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
 set clipboard+=unnamed
 set clipboar+=ideaput
 
@@ -30,11 +57,18 @@ nnoremap <s-l> :action NextTab<CR>
 
 nnoremap <Leader>q :action CloseContent<CR>
 nnoremap <Leader>qa :action CloseAllEditors<CR>
+nnoremap <Leader>c :action CloseEditor<CR>
 
-nnoremap <Leader>f :action ToolbarFindGroup<CR>
+noremap <Leader>/ :action CommentByLineComment<CR>
+
+nnoremap <Leader>f :action GotoFile<CR>
+
+nnoremap <Leader>lf :action ReformatCode<CR>
 
 set incsearch
 nnoremap <c-/> :action FindInPath<CR>
+nnoremap <Leader>st :action FindInPath<CR>
+nnoremap <Leader>sr :action ReplaceInPath<CR>
 nnoremap <c-a> :action GotoAction<CR>
 nnoremap <c-f> :action GotoFile<CR>
 nnoremap <leader>u :action FindUsages<CR>
