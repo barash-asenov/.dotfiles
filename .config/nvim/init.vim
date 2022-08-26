@@ -1,3 +1,32 @@
+" Configuration..
+
+let mapleader = " "
+
+let g:nerdtreewinpost = "left"
+nnoremap <leader>e :NERDTreeToggle<cr>
+autocmd bufenter nerd_tree_* | execute 'normal r'
+
+nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>st <cmd>lua require('telescope.builtin').live_grep()<cr>
+
+" activate mouse
+set mouse=ar
+
+" relative line number
+set rnu
+
+" no highlight search
+set nohlsearch
+
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=2
+" when indenting with '>', use 4 spaces width
+set shiftwidth=2
+" On pressing tab, insert 4 spaces
+set noexpandtab
+set smarttab
+
 call plug#begin()
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
@@ -14,7 +43,6 @@ Plug 'junegunn/vim-easy-align'
 
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
@@ -49,19 +77,4 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " Initialize plugin system
 call plug#end()
-
-" Configuration..
-
-let mapleader = ","
-
-let g:nerdtreewinpost = "left"
-nmap <f2> :NERDTreeToggle<cr>
-autocmd bufenter nerd_tree_* | execute 'normal r'
-
-nnoremap <leader>p <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep()<cr>
-
-" activate mouse
-set mouse=ar
-
 
