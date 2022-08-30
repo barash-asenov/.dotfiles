@@ -2,6 +2,9 @@
 
 let mapleader = " "
 
+" set clipboard
+set clipboard=unnamedplus
+
 let g:nerdtreewinpost = "left"
 nnoremap <leader>e :NERDTreeToggle<cr>
 autocmd bufenter nerd_tree_* | execute 'normal r'
