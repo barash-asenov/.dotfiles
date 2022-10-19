@@ -10,3 +10,6 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = https://github.com/barash-asenov/Neovim-from-scratch.git
+[submodule "lvim"]
+	path = lvim
+	url = https://github.com/barash-asenov/lunarvim.git
