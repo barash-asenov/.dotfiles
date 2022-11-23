@@ -35,6 +35,9 @@ map <C-c> <Esc>
 
 let mapleader=" "
 
+" nerdtree related stuff
+nnoremap <leader>e :NERDTreeToggle<CR>
+
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
@@ -45,12 +48,12 @@ nnoremap <c--> :action SplitHorizontally<CR>
 nnoremap <c-=> :action Unsplit<CR>
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 
-sethandler <c-j> a:vim
-sethandler <c-k> a:vim
+" sethandler <c-j> a:vim
+" sethandler <c-k> a:vim
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
+" nnoremap <c-j> <c-w>j
+" nnoremap <c-k> <c-w>k
 
 nnoremap <s-h> :action PreviousTab<CR>
 nnoremap <s-l> :action NextTab<CR>
@@ -69,18 +72,24 @@ set incsearch
 nnoremap <c-/> :action FindInPath<CR>
 nnoremap <Leader>st :action FindInPath<CR>
 nnoremap <Leader>sr :action ReplaceInPath<CR>
-nnoremap <c-a> :action GotoAction<CR>
-nnoremap <c-f> :action GotoFile<CR>
+" nnoremap <c-a> :action GotoAction<CR>
+" nnoremap <c-f> :action GotoFile<CR>
 nnoremap <leader>u :action FindUsages<CR>
 nnoremap <leader>s :action GotoRelated<CR>
 nnoremap <leader>h :action CallHierarchy<CR>
 nnoremap <leader>b :action ShowNavBar<CR>
 nnoremap <c-s> :action FileStructurePopup<CR>
-nnoremap <c-o> :action GotoSymbol<CR>
 nnoremap gc :action GotoClass<CR>
-nnoremap gi :action GotoImplementation<CR>
+nnoremap gI :action GotoImplementation<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gp :action GotoSuperMethod<CR>
 nnoremap gt :action GotoTest<CR>
-nnoremap gb :action Back<CR>
-nnoremap gf :action Forward<CR>d
+
+nnoremap <c-o> :action Back<CR>
+nnoremap <c-i> :action Forward<CR>
+
+nnoremap a g:action NewFile
+
+" Insert mode shortcuts
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
