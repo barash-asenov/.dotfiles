@@ -25,7 +25,7 @@ map Q gq
 
 
 " Find more examples here: https://jb.gg/share-ideavimrc
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 set clipboar+=ideaput
 
 nnoremap \e :e ~/.ideavimrc<CR>
